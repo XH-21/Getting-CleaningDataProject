@@ -4,12 +4,12 @@ library(dplyr)
 
 ##read in measured data, activity lables, subjects and features(variable names) 
 ##for test and train sets 
-traindata<-read.table(file.path(getwd(),'train','X_train.txt'))
-testdata<-read.table(file.path(getwd(),'test','X_test.txt'))
-test_activity<-read.table(file.path(getwd(),'test','Y_test.txt'))
-train_activity<-read.table(file.path(getwd(),'train','Y_train.txt'))
-train_sub<-read.table(file.path(getwd(),'train','subject_train.txt'))
-test_sub<-read.table(file.path(getwd(),'test','subject_test.txt'))
+traindata<-read.table(file.path(getwd(),'X_train.txt'))
+testdata<-read.table(file.path(getwd(),'X_test.txt'))
+test_activity<-read.table(file.path(getwd(),'Y_test.txt'))
+train_activity<-read.table(file.path(getwd(),'Y_train.txt'))
+train_sub<-read.table(file.path(getwd(),'subject_train.txt'))
+test_sub<-read.table(file.path(getwd(), 'subject_test.txt'))
 varname<-read.table(file.path(getwd(),'features.txt'),stringsAsFactors = FALSE)
 
 ##turn all data frames into tbl_df
