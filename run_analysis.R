@@ -1,4 +1,6 @@
 setwd('C:\\Users\\xiaonah\\Desktop\\Data_science_Coursera\\Course3-DataCleaning\\week4\\getdata%2Fprojectfiles%2FUCI HAR Dataset\\UCI HAR Dataset')
+library(tidyr)
+library(dplyr) 
 
 ##read in measured data, activity lables, subjects and features(variable names) 
 ##for test and train sets 
@@ -31,10 +33,10 @@ train_all<-tbl_df(cbind(train_sub,train_activity,traindata))
 all<-tbl_df(rbind(train_all,test_all))
 
 
-##Extracts only the measurements on the mean and standard deviation for each measurement
+##Extract only the measurements on the mean and standard deviation for each measurement
 all_mean_std<-select(all,1:2,grep('mean\\(\\)|std\\(\\)',varname$V2)+2)
 
-##renames data variables using the features.txt file
+##rename data variables using the features.txt file
 names(all_mean_std)[3:(ncol(all_mean_std))]<-grep('mean\\(\\)|std\\(\\)',varname$V2,value=TRUE)
 
 ##Recode activity column using values from the Activity labels text file
@@ -45,7 +47,7 @@ all_mean_std$activity[all_mean_std$activity==4] <-'SITTING'
 all_mean_std$activity[all_mean_std$activity==5] <-'STANDING'
 all_mean_std$activity[all_mean_std$activity==6] <-'LAYING'
 
-##creates a second, independent tidy data set with the average of each variable 
+##create a second, independent tidy data set with the average of each variable 
 ##for each activity and each subject.
 tidy_set<-
     all_mean_std%>% 
