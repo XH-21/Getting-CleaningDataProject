@@ -7,7 +7,7 @@
 
 
 
-###### Variable Name: activity        
+##### Variable Name: activity        
   Definition: Activities that subjects performed to collect data          
   Value: LAYING; SITTING; STANDING; WALKING; WALKING_DOWNSTAIRS; WALKING_UPSTAIRS
 
