@@ -1,6 +1,6 @@
-Codebook for Tidy Set 
+### Codebook for Tidy Set 
 
-Variable Name: subject 
+##### Variable Name: subject 
    .          
   Definition: Subject ID for the experiment participants         
   Value: 1 to 30, each represents an experiment participant 
@@ -8,14 +8,14 @@ Variable Name: subject
 
 
 
-Variable Name: activity
+###### Variable Name: activity
    .          
   Definition: Activities that subjects performed to collect data          
   Value: LAYING; SITTING; STANDING; WALKING; WALKING_DOWNSTAIRS; WALKING_UPSTAIRS
 
 
 
-Variable Name: measurement            
+##### Variable Name: measurement            
   Definition: measurement of the features selected      
   Value: 
   "tBodyAcc-mean()-X"          
@@ -85,7 +85,7 @@ Variable Name: measurement
 	"fBodyBodyGyroJerkMag-mean()" 
 	"fBodyBodyGyroJerkMag-std()" 
 	
-	Variable Name: mean 
+##### Variable Name: mean 
    .          
   Definition: Mean of the measurement by subject and by activity         
   Value: n/a
